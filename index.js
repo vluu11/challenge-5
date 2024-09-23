@@ -55,7 +55,6 @@ const questions = [
 function writeToFile(fileName, response) {
 
 
-
 }
 
 // TODO: Create a function to initialize app
