@@ -41,14 +41,6 @@ const questions = [
     choices: ['Apache License 2.0', 'MIT License'],
     name: 'license'
 },
-
-{
-    type: 'confirm',
-    name: 'continuePrompt',
-    message: 'Do you want to add another input?',
-    default: false,
-},
-
 ]; 
 
 // TODO: Create a function to write README file
