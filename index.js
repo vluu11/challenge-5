@@ -1,8 +1,64 @@
-# 1
+// TODO: Include packages needed for this application
+import inquirer from "inquirer";
+import fs from "fs";
+
+// TODO: Create an array of questions for user input
+const questions = [
+{
+    type: 'input',
+    message: 'Enter project title',
+    name: 'title'
+},
+
+{
+    type: 'input',
+    message: 'Enter a description of your project.',
+    name: 'description'
+},
+
+{
+    type: 'input',
+    message: 'Add instructions for installation.',
+    name: 'installation'
+},
+
+{
+    type: 'input',
+    message: 'Add details on usage',
+    name: 'usage'
+},
+
+{
+    type: 'input',
+    message: 'Enter credits',
+    name: 'credits'
+},
+
+{
+    type: 'list',
+    message: 'Choose a license',
+    choices: ['Apache License 2.0', 'MIT License'],
+    name: 'license'
+},
+
+{
+    type: 'confirm',
+    name: 'continuePrompt',
+    message: 'Do you want to add another input?',
+    default: false,
+},
+
+]; 
+
+// TODO: Create a function to write README file
+function writeToFile(fileName, response) {
+
+let readMeContent =
+`# ${response.title}
 
 ## Description
 
-2
+${response.description}
 
 ## Table of Contents
 
@@ -13,19 +69,51 @@
 
 ## Installation
 
-3
+${response.installation}
 
 ## Usage
 
-4
+${response.usage}
 
 ## Credits 
 
-5
+${response.credits}
 
 ## License
 
-                             Apache License
+`;
+
+if(response.license === 'MIT License')
+{
+    const mitLicense = `MIT License
+
+Copyright (c) 
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.`
+
+readMeContent = `${readMeContent}${apacheLicense}`;
+
+}
+else{
+
+    const apacheLicense = 
+    `                             Apache License
                        Version 2.0, January 2004
                     http://www.apache.org/licenses/
 
@@ -98,3 +186,23 @@ TERMS AND CONDITIONS FOR USE, REPRODUCTION, AND DISTRIBUTION
     This License shall be governed by and interpreted in accordance with the laws of the State of California, without regard to its conflict-of-law provisions. If any provision of this License is held to be invalid or unenforceable, that provision shall be reformed only to the extent necessary to make it valid and enforceable. The invalidity or unenforceability of any provision of this License shall not affect the validity or enforceability of the remaining provisions of this License, which shall remain in full force and effect.
 
 END OF TERMS AND CONDITIONS
+`
+
+readMeContent = `${readMeContent}${apacheLicense}`;
+
+}
+fs.writeFile(fileName, readMeContent, (err) => err ? console.error(err) : console.log('Success!'))
+
+}
+
+// TODO: Create a function to initialize app
+function init() {
+    inquirer
+        .prompt(questions)
+        .then(response => {
+            writeToFile('README.md', response)
+        })
+}
+
+// Function call to initialize app
+init();
