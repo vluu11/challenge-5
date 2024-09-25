@@ -7,7 +7,7 @@ import generateMarkdown from "./utils/generateMarkdown.js";
 const questions = [
 {
     type: 'input',
-    message: 'Enter project title',
+    message: 'Enter project title.',
     name: 'title'
 },
 
@@ -25,13 +25,13 @@ const questions = [
 
 {
     type: 'input',
-    message: 'Add details on usage',
+    message: 'Add details on usage.',
     name: 'usage'
 },
 
 {
     type: 'input',
-    message: 'Enter credits',
+    message: 'Enter credits.',
     name: 'credits'
 },
 
@@ -41,6 +41,24 @@ const questions = [
     choices: ['Apache License 2.0', 'MIT License'],
     name: 'license'
 },
+
+{
+    type: 'input',
+    message: 'Enter features.',
+    name: 'features',
+},
+
+{
+    type: 'input',
+    message: 'Add details on how to contribute.',
+    name: 'contribute',
+},
+
+{
+    type: 'input',
+    message: 'Add tests.',
+    name: 'tests'
+}
 ]; 
 
 // TODO: Create a function to write README file
