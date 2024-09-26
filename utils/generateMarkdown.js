@@ -96,9 +96,8 @@ ${data.tests}`;
 
 }
 
-function addLicenseText(data){let myLicense = null;
-
-  if(data.license === 'MIT License'){
+function addLicenseText(license){
+  if(license === 'MIT License'){
   return `Copyright (c) 2024
   
   Permission is hereby granted, free of charge, to any person obtaining a copy
