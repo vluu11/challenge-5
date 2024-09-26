@@ -45,7 +45,7 @@ Copyright 2024
 
 ## Badges
 
-![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)
+![License: Apache](https://img.shields.io/badge/License-Apache%202.0-blue.svg)
 
 ## Features
 
