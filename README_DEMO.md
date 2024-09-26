@@ -1,8 +1,8 @@
-# Challenge 5
+# challenge #5 demo
 
 ## Description
 
-This app's purpose is to dynamically generate a README.md filebased on the user's input and render it.
+This demo is to demostrate to the user how they can generate a readme.md  by answer  given prompts.
 
 ## Table of Contents
 
@@ -16,22 +16,15 @@ This app's purpose is to dynamically generate a README.md filebased on the user'
 
 ## Installation
 
-Download of the necessary Javascript files and Inquirer is required to run this program
+the only installation required are the necessary scripts and files 
 
 ## Usage
 
-The app is ran through the terminal and questions will be prompted for each necessary categories to be filled such as the title , description, installation, and so forth. 
-
-![terminalQuestions](./img/Screenshot%202024-09-25%20205429.png)
-_______________________________________________________________________________________
-
-After which the program will generate a README.md tailored to the user's inputs. 
+this readme gen is utilized through the terminal
 
 ## Credits 
 
-Vuong 
-  - repo: https://github.com/vluu11/readMeGen
-  - video: https://drive.google.com/file/d/1X2IFfmGKgHoo3raZWrgmI_8ApojwLhIY/view
+none
 
 ## License
     
