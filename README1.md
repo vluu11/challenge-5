@@ -31,6 +31,7 @@ After which the program will generate a README.md tailored to the user's inputs.
 
 Vuong 
   - repo: https://github.com/vluu11/readMeGen
+  - video: https://drive.google.com/file/d/1X2IFfmGKgHoo3raZWrgmI_8ApojwLhIY/view
 
 ## License
     
