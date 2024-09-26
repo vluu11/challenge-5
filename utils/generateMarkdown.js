@@ -6,10 +6,10 @@ function renderLicenseBadge(license) {
   }else{
     switch(license){
       case 'MIT License':
-        return `[!License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)`
+        return `![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)`
         
       case 'Apache License 2.0':
-        return `[!License: Apache](https://img.shields.io/badge/License-Apache%202.0-blue.svg)`
+        return `![License: Apache](https://img.shields.io/badge/License-Apache%202.0-blue.svg)`
       
       default: 
     }
