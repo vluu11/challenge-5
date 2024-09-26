@@ -16,11 +16,16 @@ This app's purpose is to dynamically generate a README.md filebased on the user'
 
 ## Installation
 
-none
+Download of the necessary Javascript files and Inquirer is required to run this program
 
 ## Usage
 
-The app is ran through the terminal and questions will be prompted for each necessary categories to be filled such as the title , description, installation, and so forth.
+The app is ran through the terminal and questions will be prompted for each necessary categories to be filled such as the title , description, installation, and so forth. 
+
+![terminalQuestions](./img/Screenshot%202024-09-25%20205429.png)
+_______________________________________________________________________________________
+
+After which the program will generate a README.md tailored to the user's inputs. 
 
 ## Credits 
 
@@ -46,7 +51,7 @@ Copyright 2024
 
 ## Badges
 
-[License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)
+![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)
 
 ## Features
 
